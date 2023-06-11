@@ -6,8 +6,8 @@ on:
       - edited
       - opened
       - synchronize
-    paths:
-      - 'src/**.js'
+    # paths:
+    #   - 'src/**.js'
 
 jobs:
   unit-test:
