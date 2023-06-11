@@ -16,7 +16,18 @@ const isUniqueWithoutExtraDataStructure = (input) => {
 
 
 const isUnique = (input) => {
+  const tempObject = {}
 
+  for (const character of input) {
+    
+    if (tempObject[character]) {
+      return false
+    }
+
+    tempObject[character] = true
+  }
+
+  return true
 }
 
 module.exports = {
