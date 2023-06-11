@@ -2,6 +2,7 @@
  * Checking if an input/string has unique values
  * without an extra data structure
 */
+
 const isUniqueWithoutExtraDataStructure = (input) => {
   for (let i = 0; i < input.length; i++) {
     const characterExternal = input[i]
@@ -25,6 +26,7 @@ const isUniqueWithoutExtraDataStructure = (input) => {
  * With this approach we don't need a extra "for"
  * like the previous one example.
 */
+
 const isUnique = (input) => {
   const tempObject = {}
 
