@@ -2,7 +2,12 @@ name: 'Testing the application'
 
 on:
   pull_request:
-    types: [created, edited]
+    types:
+      - edited
+      - opened
+      - synchronize
+    paths:
+      - 'src/**.js'
 
 jobs:
   unit-test:
