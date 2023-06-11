@@ -1,8 +1,11 @@
-const isUniqueWithoutExtraDataStructure = (s) => {
-  for (let i = 0; i < s.length; i++) {
-    const c = s[i];
-    for (let j = i + 1; j < s.length; j++) {
-      if (c === s[j]) {
+const isUniqueWithoutExtraDataStructure = (input) => {
+  for (let i = 0; i < input.length; i++) {
+    const characterExternal = input[i]
+    
+    for (let j = (i + 1); j < input.length; j++) {
+      const characterInternal = input[j]
+      
+      if (characterExternal === characterInternal) {
         return false
       }
     }
