@@ -2,9 +2,11 @@
 
 Cracking the Coding Interview 6th Edition with JavaScript Solutions
 
-- Under the `src` folder, there are javascript files for each exercise. 
-- Under the `src` folder, there are tests files for each exercise. 
-- For each exercise, can have more than one solution
+[Portuguese](#PT-BR.md)
+
+👉 Under the `src` folder, there are javascript files for each exercise. 
+👉 Under the `src` folder, there are tests files for each exercise. 
+👉 For each exercise, can have more than one solution
 
 ## List of Coding Questions
 
