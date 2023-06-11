@@ -2,7 +2,7 @@
 
 Cracking the Coding Interview 6th Edition with JavaScript Solutions
 
-[Portuguese](#PT-BR.md)
+[🇧🇷 Portuguese](/PT-BR.md)
 
 👉 Under the `src` folder, there are javascript files for each exercise. 
 👉 Under the `src` folder, there are tests files for each exercise. 
