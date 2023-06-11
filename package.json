@@ -1,0 +1,14 @@
+{
+  "name": "cracking-the-coding-interview-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:laisfrigerio/cracking-the-coding-interview-js.git",
+  "author": "Lais Frigerio <lais.frigerio@nubank.com.br>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
