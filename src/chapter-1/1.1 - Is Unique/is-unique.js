@@ -14,6 +14,12 @@ const isUniqueWithoutExtraDataStructure = (input) => {
   return true
 }
 
+
+const isUnique = (input) => {
+
+}
+
 module.exports = {
+  isUnique,
   isUniqueWithoutExtraDataStructure
 }
