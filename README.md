@@ -2,5 +2,5 @@
 
 Cracking the Coding Interview 6th Ed with JavaScript Solutions
 
-- [] Chapter 01
+- [ ] Chapter 01
   - [x] Is Unique
