@@ -4,4 +4,4 @@ Implemente um algoritmo que determine se uma string tem apenas caracteres unicos
 
 # Dicas
 
-👉 Tente uma Tabela Hash como estrutura de dados adicional
+- Tente uma Tabela Hash como estrutura de dados adicional

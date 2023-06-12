@@ -4,4 +4,4 @@ Implement an algorithm to determine if a string has all unique characteres. What
 
 # Hints
 
-👉 Try a Hash Table as additional data structure
+- Try a Hash Table as additional data structure
