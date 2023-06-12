@@ -10,7 +10,7 @@ Soluções em JavaScript dos exercícios do livro "Cracking the Coding Interview
 
 ### Capítulo 1
 - [x] 1.1 - Is Unique
-- [ ] 1.2 - Check Permutation
+- [x] 1.2 - Check Permutation
 - [ ] 1.3 - URLify
 - [ ] 1.4 - Palindrome Permutation
 - [ ] 1.5 - One Away
