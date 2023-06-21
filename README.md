@@ -8,12 +8,16 @@ Cracking the Coding Interview 6th Edition with JavaScript Solutions
 - Under the `src` folder, there are tests files for each exercise. 
 - For each exercise, can have more than one solution
 
+## Translate
+
+[🇧🇷 Portuguese](/PT-BR.md)
+
 ## List of Coding Questions
 
 ### Chapter
 - [x] 1.1 - Is Unique
 - [x] 1.2 - Check Permutation
-- [ ] 1.3 - URLify
+- [x] 1.3 - URLify
 - [ ] 1.4 - Palindrome Permutation
 - [ ] 1.5 - One Away
 - [ ] 1.6 - String Compression
