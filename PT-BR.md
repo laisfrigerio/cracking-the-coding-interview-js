@@ -13,9 +13,9 @@ Soluções em JavaScript dos exercícios do livro "Cracking the Coding Interview
 ## Lista de exercícios por Capítulos
 
 ### Capítulo 1
-- [x] 1.1 - Is Unique
-- [x] 1.2 - Check Permutation
-- [ ] 1.3 - URLify
+- [x] [1.1 - Is Unique](./src/chapter-1/1.1%20-%20Is%20Unique/PT-BR.md)
+- [x] [1.2 - Check Permutation](./src/chapter-1/1.2%20-%20Check%20Permutation/PT-BR.md)
+- [x] [1.3 - URLify](./src/chapter-1/1.3%20-%20URIfy/PT-BR.md)
 - [ ] 1.4 - Palindrome Permutation
 - [ ] 1.5 - One Away
 - [ ] 1.6 - String Compression
