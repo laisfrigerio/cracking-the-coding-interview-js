@@ -5,6 +5,12 @@ no final para conter os caracteres adicionais e que a função vai receber o com
 
 Nota: Se estiver implementando em Java, use um array de caracteres para que você possa executar esta operação.
 
+# Exemplo
+
+Entrada:  `"Hi, Ana. How are you?        "`
+
+Saída: `"Hi,%20Ana.%20How%20are%20you?"`
+
 # Dicas
 
 - Você pode achar que precisa saber o número de espaços. Você pode apenas contá-los?

@@ -8,6 +8,7 @@ Note: If implementing in Java, please isa a character array so that you can perf
 # Example
 
 Input:  `"Hi, Ana. How are you?        "`
+
 Output: `"Hi,%20Ana.%20How%20are%20you?"`
 
 # Hints
