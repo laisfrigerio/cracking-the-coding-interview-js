@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URLfy | Cracking the Coding Interview</title>
+  <meta name="description" content="URLfy exercise with description, tips and solutions">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai-sublime.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/index.css">
+</head>
+<body>
+  <article>
+    <ul class="breadcrumb">
+      <li><a target="_blank" href="../../../index.html">Cracking the Coding Interview</a></li>
+      <li><a target="_blank" href="../index.html">Chapter 1</a></li>
+      <li>URLfy</li>
+    </ul>
+    
+    <h1 class="title-01">URLfy</h1>
+    
+    <p>Escreva um método para substituir todos os espaços em uma string por `%20`. Você pode assumir que a string tem espaço suficiente
+      no final para conter os caracteres adicionais e que a função vai receber o comprimento "verdadeiro" da string.</p>
+
+    <h2 class="title-tip">Dicas</h2>
+    <ul class="list">
+      <li>Você pode achar que precisa saber o número de espaços em branco. Você pode apenas contá-los?</li>
+      <li>Muitas vezes é mais fácil modificar strings indo do final da string para o começo</li>
+    </ul>
+
+    <h3 class="title-03">Solução 1</h3>
+
+    <pre class="code-highlight">
+      <code class="code-display language-javascript">
+const urify = (input, realSize) => {
+  const arrayInput = input.split("")
+  
+  let spaceCount = 0
+
+  for (let i = 0; i < realSize; i++) {
+    if (arrayInput[i] === ' ') {
+      spaceCount++
+    }
+  }
+
+  let index = realSize + (spaceCount * 2)
+
+  if (index === arrayInput.length) {
+    for (let i = realSize - 1; i >= 0; i--) {
+      if (arrayInput[i] === ' ') {
+        arrayInput[index - 1] = '0'
+        arrayInput[index - 2] = '2'
+        arrayInput[index - 3] = '%'
+        index = index - 3
+      } else {
+        arrayInput[index-1] = arrayInput[i]
+        index--
+      }
+    }
+  }
+
+  return arrayInput.join("")
+}
+      </code>
+      <div class="code-original"></div>
+      <button title="Click here to copy the code" class="copy-to-clipboard"></button>
+    </pre>
+
+    <h3 class="title-03">Solução 2</h3>
+    <pre class="code-highlight">
+      <code class="code-display language-javascript">
+const spacesAvailable = (characters, trueLength) => {
+  const spaces = []
+
+  for (let index = 0; index < trueLength; index++) {
+    if (characters[index] === ' ') {
+      spaces.push(index)
+    }
+  }
+
+  return spaces
+}
+
+const urify = (input, trueLength) => {
+  const characters = input.split("")
+  
+  const spaces = spacesAvailable(characters, trueLength)
+  const spaceCount = spaces.length
+
+  const transformedIndex = trueLength + (spaceCount * 2)
+
+  if (transformedIndex === characters.length) {
+    for (let index = 0; index < spaces.length; index++) {
+      characters[spaces[index]] = '%20'
+    }
+
+    return characters.join("").trim()
+  }
+
+  return characters.join("")
+}
+      </code>
+      <div class="code-original"></div>
+      <button title="Click here to copy the code" class="copy-to-clipboard"></button>
+    </pre>
+  </article>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js"></script>
+  <script src="../../../assets/js/index.js"></script> 
+</body>
+</html>

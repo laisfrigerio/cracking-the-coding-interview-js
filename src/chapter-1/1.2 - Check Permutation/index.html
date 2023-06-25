@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Permutation | Cracking the Coding Interview</title>
+  <meta name="description" content="Check Permutation exercise with description, tips and solutions">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai-sublime.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/index.css">
+</head>
+<body>
+  <article>
+    <ul class="breadcrumb">
+      <li><a target="_blank" href="../../../index.html">Cracking the Coding Interview</a></li>
+      <li><a target="_blank" href="../index.html">Chapter 1</a></li>
+      <li>Check Permutation</li>
+    </ul>
+    
+    <h1 class="title-01">Check Permutation</h1>
+    
+    <p>Dado duas strings, escreva uma função que decida se uma é permuta da outra.</p>
+
+    <h2 class="title-tip">Dicas</h2>
+    <ul class="list">
+      <li>A solução pode levar em consideração se é Case Sensitive: "God" não é permutação de "dog"</li>
+      <li>A solução pode levar em consideração espaços em branco: "God    " não é permutação de "Dog"</li>
+      <li>String de tamanhos diferentes não são permutas uma da outra</li>
+      <li>Ordenando as strings e ambas sendo iguais significa que uma é permuta de outro</li>
+    </ul>
+
+    <h3 class="title-03">Solução 1</h3>
+
+    <pre class="code-highlight">
+      <code class="code-display language-javascript">
+/*
+ * This solution sounds more simple, but the Big O complexity is greater
+
+  - First, the spread operator is probably a loop behind the scenes
+  
+  - To sort, we need to loop through the elements, 
+    and depend of the sort algorithm, it can take a 
+    lot of time to complete
+
+  - Finally, we have to iterate again to join the array into string
+
+  Also, we have a extra use of memory space compare 
+  to the checkPermutation function
+ */
+
+const checkPermutationOrdered = (setence1, setence2) => {
+  if (setence1.length !== setence2.length) {
+    return false
+  }
+
+  const sentence1Ordered = [...setence1].sort().join('')
+  const sentence2Ordered = [...setence2].sort().join('')
+
+  return sentence1Ordered === sentence2Ordered
+}
+      </code>
+      <div class="code-original"></div>
+      <button title="Click here to copy the code" class="copy-to-clipboard"></button>
+    </pre>
+
+    <h3 class="title-03">Solução 2</h3>
+    <pre class="code-highlight">
+      <code class="code-display language-javascript">
+/*
+ * Firstly, Strings with different sizes 
+   are not permutation one for other.
+
+  If they are the same size, we can check with all 
+  the characters from string 1 exists in the string 2
+ */
+
+const checkPermutation = (setence1, setence2) => {
+  if (setence1.length !== setence2.length) {
+    return false
+  }
+
+  for (const character of setence1) {
+    if (!setence2.includes(character)) {
+      return false
+    }
+  }
+
+  return true
+}
+      </code>
+      <div class="code-original"></div>
+      <button title="Click here to copy the code" class="copy-to-clipboard"></button>
+    </pre>
+  </article>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js"></script>
+  <script src="../../../assets/js/index.js"></script> 
+</body>
+</html>

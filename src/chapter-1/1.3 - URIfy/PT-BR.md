@@ -13,5 +13,5 @@ Saída: `"Hi,%20Ana.%20How%20are%20you?"`
 
 # Dicas
 
-- Você pode achar que precisa saber o número de espaços. Você pode apenas contá-los?
+- Você pode achar que precisa saber o número de espaços em branco. Você pode apenas contá-los?
 - Muitas vezes é mais fácil modificar strings indo do final da string para o começo.

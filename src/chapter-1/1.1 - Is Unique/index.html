@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Is Unique | Cracking the Coding Interview</title>
+  <meta name="description" content="Is Unique exercise with description, tips and solutions">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai-sublime.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/index.css">
+</head>
+<body>
+  <article>
+    <ul class="breadcrumb">
+      <li><a target="_blank" href="../../../index.html">Cracking the Coding Interview</a></li>
+      <li><a target="_blank" href="../index.html">Chapter 1</a></li>
+      <li>Is Unique</li>
+    </ul>
+    
+    <h1 class="title-01">Is Unique</h1>
+    
+    <p>Implemente um algoritmo que determine se uma string tem apenas caracteres unicos sem o uso de estruturas de dados adicionais.</p>
+
+    <p>Mas, e se você não pudesse utilizar uma estrutura de dados adicional?</p>
+    
+    <h2 class="title-tip">Dicas</h2>
+    <ul class="list">
+      <li>Tente uma Tabela Hash como estrutura de dados adicional</li>
+    </ul>
+
+    <h3 class="title-03">Solução 1</h3>
+
+    <pre class="code-highlight">
+      <code class="code-display language-javascript">
+/*
+* Checking if an input/string has unique values
+* without an extra data structure
+*/
+
+const isUniqueWithoutExtraDataStructure = (input) => {
+  for (let i = 0; i < input.length; i++) {
+    const characterExternal = input[i]
+    
+    for (let j = (i + 1); j < input.length; j++) {
+      const characterInternal = input[j]
+      
+      if (characterExternal === characterInternal) {
+        return false
+      }
+    }
+  }
+
+  return true
+}
+      </code>
+      <div class="code-original"></div>
+      <button title="Click here to copy the code" class="copy-to-clipboard"></button>
+    </pre>
+
+    <h3 class="title-03">Solução 2</h3>
+    <pre class="code-highlight">
+      <code class="code-display language-javascript">
+/*
+* Checking if an input/string has unique values
+* with a usage of extra data structure (object).
+* With this approach we don't need a extra "for"
+* like the previous one example.
+*/
+
+const isUnique = (input) => {
+  const tempObject = {}
+
+  for (const character of input) {
+    
+    if (tempObject[character]) {
+      return false
+    }
+
+    tempObject[character] = true
+  }
+
+  return true
+}
+      </code>
+      <div class="code-original"></div>
+      <button title="Click here to copy the code" class="copy-to-clipboard"></button>
+    </pre>
+  </article>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js"></script>
+  <script src="../../../assets/js/index.js"></script> 
+</body>
+</html>
