@@ -13,9 +13,9 @@ Cracking the Coding Interview 6th Edition with JavaScript Solutions
 ## List of Coding Questions
 
 ### Chapter
-- [x] [1.1 - Is Unique](./src/chapter-1/1.1%20-%20Is%20Unique/README.md)
-- [x] [1.2 - Check Permutation](./src/chapter-1/1.2%20-%20Check%20Permutation/README.md)
-- [x] [1.3 - URLify](./src/chapter-1/1.3%20-%20URIfy/README.md)
+- [x] [1.1 - Is Unique](./solutions/chapter-1/1.1%20-%20Is%20Unique/README.md)
+- [x] [1.2 - Check Permutation](./solutions/chapter-1/1.2%20-%20Check%20Permutation/README.md)
+- [x] [1.3 - URLify](./solutions/chapter-1/1.3%20-%20URIfy/README.md)
 - [ ] 1.4 - Palindrome Permutation
 - [ ] 1.5 - One Away
 - [ ] 1.6 - String Compression
