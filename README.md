@@ -1,6 +1,6 @@
 # Cracking The Coding Interview with JS
 
-Soluções em JavaScript dos exercícios do livro "Cracking the Coding Interview 6 edição"
+Soluções em JavaScript dos exercícios do livro "Cracking the Coding Interview" 6ª edição.
 
 - Dentro da pasta `solutions`, têm arquivos `.js` para cada exercício. 
 - Dentro da pasta `solutions`, têm arquivos de testes `.test.js` para cada exercício
@@ -13,7 +13,7 @@ Soluções em JavaScript dos exercícios do livro "Cracking the Coding Interview
 - [x] [1.2 - Check Permutation](./solutions/chapter-1/1.2-check-permutation/)
 - [x] [1.3 - URLify](./solutions/chapter-1/1.3-urlfy/)
 - [x] [1.4 - Palindrome Permutation](./solutions/chapter-1/1.4-palindrome-permutation/)
-- [ ] 1.5 - One Away
+- [x] [1.5 - One Away](./solutions/chapter-1/1.5-one-away/)
 - [ ] 1.6 - String Compression
 - [ ] 1.7 - Rotate Matrix
 - [ ] 1.8 - Zero Matrix
