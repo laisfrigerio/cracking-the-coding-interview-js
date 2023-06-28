@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palindrome Permutation | Cracking the Coding Interview</title>
+  <meta name="description" content="Palindrome Permutation exercise with description, tips and solutions">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai-sublime.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/index.css">
+</head>
+<body>
+  <article>
+    <ul class="breadcrumb">   
+      <li><a target="_blank" href="../../../">Cracking the Coding Interview</a></li>
+      <li><a target="_blank" href="../">Chapter 1</a></li>
+      <li>Palindrome Permutation</li>
+    </ul>
+    
+    <h1 class="title-01">Palindrome Permutation</h1>
+    
+    <p>Dado uma string, escreva uma função para checar se a string é uma permutation de um palíndromo.</p>
+
+    <p>Um palíndromo é uma palavra ou frase ou sentença que permanece igual quando lida de trás para frente.</p>
+
+    <p>A permutação é um rearranjo das letras.</p>
+
+    <p>O palíndromo não precisa ser limitado a apenas palavras do dicionário. Exemplo:</p>
+
+    <h2 class="title-tip">Dicas</h2>
+    <ul class="list">
+      <li>Você não precisa (e nem deve) gerar todas as permutações possíveis</li>
+      <li>Que características teria uma string que é uma permutação de um palíndromo?</li>
+      <li>Você já tentou uma tabela hash? Você conseguiria reduzir a complexidade para O(N)?</li>
+    </ul>
+
+    <h3 class="title-03">Solução</h3>
+
+    <pre class="code-highlight">
+      <code class="code-display language-javascript">
+function isMod (input) {
+  return input % 2 === 0
+}
+
+function incremet (input) {
+  return input + 1
+}
+
+function isEmpty (input) {
+  return input === ' '
+}
+
+function assoc (map, key) {
+  map[key] = 1
+}
+
+function updateOddQuantity (input, oddQuantity) {
+  if (isMod(input)) {
+    return oddQuantity - 1
+  }
+
+  return oddQuantity + 1
+}
+
+function palindrome (input) {
+  let characterHashMap = {}
+  let oddQuantity = 0;
+
+  for (let i = 0; i < input.length; i++) {
+    const character = input[i].toLowerCase()
+
+    if (isEmpty(character)) {
+      continue
+    }
+
+    if (characterHashMap[character]) {
+      characterHashMap[character] = incremet(characterHashMap[character])
+      oddQuantity = updateOddQuantity(characterHashMap[character], oddQuantity)
+      continue
+    }
+
+    assoc(characterHashMap, character)
+    oddQuantity = incremet(oddQuantity)
+  }
+
+  return oddQuantity < 2
+}
+      </code>
+      <div class="code-original"></div>
+      <button title="Click here to copy the code" class="copy-to-clipboard"></button>
+    </pre>
+  </article>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js"></script>
+  <script src="../../../assets/js/index.js"></script> 
+</body>
+</html>

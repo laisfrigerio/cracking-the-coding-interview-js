@@ -1,22 +1,22 @@
 # Cracking The Coding Interview with JS
 
-Cracking the Coding Interview 6th Edition with JavaScript Solutions
+Soluções em JavaScript dos exercícios do livro "Cracking the Coding Interview 6 edição"
 
-- Under the `src` folder, there are javascript files for each exercise. 
-- Under the `src` folder, there are tests files for each exercise. 
-- For each exercise, can have more than one solution
+- Dentro da pasta `src`, têm arquivos `.js` para cada exercício. 
+- Dentro da pasta `src`, têm arquivos de testes `.test.js` para cada exercício
+- Para cada exercício, pode haver mais de uma solução
 
 ## Translate
 
-[🇧🇷 Portuguese](/PT-BR.md)
+[🇺🇸 English](/README.md)
 
-## List of Coding Questions
+## Lista de exercícios por Capítulos
 
-### Chapter
-- [x] [1.1 - Is Unique](./solutions/chapter-1/1.1%20-%20Is%20Unique/README.md)
-- [x] [1.2 - Check Permutation](./solutions/chapter-1/1.2%20-%20Check%20Permutation/README.md)
-- [x] [1.3 - URLify](./solutions/chapter-1/1.3%20-%20URIfy/README.md)
-- [ ] 1.4 - Palindrome Permutation
+### Capítulo 1
+- [x] [1.1 - Is Unique](./solutions/chapter-1/1.1-is-unique/)
+- [x] [1.2 - Check Permutation](./solutions/chapter-1/1.2-check-permutation/)
+- [x] [1.3 - URLify](./solutions/chapter-1/1.3-urlfy/)
+- [x] [1.4 - Palindrome Permutation](./solutions/chapter-1/1.4-palindrome-permutation/)
 - [ ] 1.5 - One Away
 - [ ] 1.6 - String Compression
 - [ ] 1.7 - Rotate Matrix
@@ -25,23 +25,23 @@ Cracking the Coding Interview 6th Edition with JavaScript Solutions
 
 ...
 
-## 🛠️ Stack
+## 🛠️ Tecnologias
 
 - nodejs `18.12.1`
 - jest `^29.5.0`
 - yarn `1.22.19`
 
-## :gem: Run Tests
+## :gem: Execute os testes
 
 ```
     yarn install
     yarn test
 ```
 
-## :woman: Author
+## :woman: Autora
 
 [@laisfrigerio](https://instagram.com/laisfrigerio/)
 
-## 📄 License
+## 📄 Licença
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+Este projeto está licenciado sob a licença MIT - consulte o arquivo LICENSE.md para obter detalhes
