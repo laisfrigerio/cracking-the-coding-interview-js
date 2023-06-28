@@ -23,7 +23,7 @@ function updateOddQuantity (input, oddQuantity) {
 }
 
 function palindrome (input) {
-  let even = {}
+  let characterHashMap = {}
   let oddQuantity = 0;
 
   for (let i = 0; i < input.length; i++) {
@@ -33,13 +33,13 @@ function palindrome (input) {
       continue
     }
 
-    if (even[character]) {
-      even[character] = incremet(even[character])
-      oddQuantity = updateOddQuantity(even[character], oddQuantity)
+    if (characterHashMap[character]) {
+      characterHashMap[character] = incremet(characterHashMap[character])
+      oddQuantity = updateOddQuantity(characterHashMap[character], oddQuantity)
       continue
     }
 
-    assoc(even, character)
+    assoc(characterHashMap, character)
     oddQuantity = incremet(oddQuantity)
   }
 
