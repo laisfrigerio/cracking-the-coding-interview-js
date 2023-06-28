@@ -2,13 +2,9 @@
 
 Soluções em JavaScript dos exercícios do livro "Cracking the Coding Interview 6 edição"
 
-- Dentro da pasta `src`, têm arquivos `.js` para cada exercício. 
-- Dentro da pasta `src`, têm arquivos de testes `.test.js` para cada exercício
+- Dentro da pasta `solutions`, têm arquivos `.js` para cada exercício. 
+- Dentro da pasta `solutions`, têm arquivos de testes `.test.js` para cada exercício
 - Para cada exercício, pode haver mais de uma solução
-
-## Translate
-
-[🇺🇸 English](/README.md)
 
 ## Lista de exercícios por Capítulos
 
