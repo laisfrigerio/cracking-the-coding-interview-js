@@ -140,6 +140,10 @@ article .title-05 + ul {
   margin-top: 10px;
 }
 
+article .title-03 + p {
+  margin-top: 20px;
+}
+
 article ul {
   color: var(--gray-04);
   line-height: 150%;

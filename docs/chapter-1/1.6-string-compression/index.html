@@ -38,6 +38,12 @@
 
     <h3 class="title-03">Solução 1:</h3>
 
+    <p>Eu comecei resolvendo o exercício pensando em iterar sob a string e comparar com o anterior.</p>
+
+    <p>Inicialmente, eu pensei em guardar a soma em uma Hash Table. No final, a lógica de comparar com o anterior ficou mais complexa, se comparada com as demaos soluções.</p>
+
+    <p>Segue solução:</p>
+
     <pre class="code-highlight">
       <code class="code-display language-javascript">
 function stringCompression (input) {
@@ -81,6 +87,10 @@ function stringCompression (input) {
 
     <h3 class="title-03">Solução 2:</h3>
 
+    <p>Já a solução comparando o atual caracter com o próximo é bem mais simples.</p>
+
+    <p>Toda vez que o próximo caracter é diferente, fazemos a concatenação e resetamos o contador:</p>
+
     <pre class="code-highlight">
       <code class="code-display language-javascript">
 function stringCompression (input) {
@@ -109,6 +119,10 @@ function stringCompression (input) {
     </pre>
 
     <h3 class="title-03">Solução 3:</h3>
+
+    <p>Como a concatenação de strings pode ficar "cara" computacionalmente falando, 
+      então pode ser melhor adicionar o resultado em um array <code>push()</code> e, no final, 
+      transformá-lo em string <code>join()</code>:</p>
 
     <pre class="code-highlight">
       <code class="code-display language-javascript">
