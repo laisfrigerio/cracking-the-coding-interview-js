@@ -1,10 +1,9 @@
 function stringCompression (input) {
-  const inputArray = input.split("")
   const resultArray = []
 
   let count = 0
 
-  for (let index = 0; index < inputArray.length; index++) {
+  for (let index = 0; index < input.length; index++) {
     const currentCharacter = input[index];
     count++
     
