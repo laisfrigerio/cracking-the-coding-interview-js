@@ -14,7 +14,7 @@ Soluções em JavaScript dos exercícios do livro "Cracking the Coding Interview
 - [x] [1.3 - URLify](./solutions/chapter-1/1.3-urlfy/)
 - [x] [1.4 - Palindrome Permutation](./solutions/chapter-1/1.4-palindrome-permutation/)
 - [x] [1.5 - One Away](./solutions/chapter-1/1.5-one-away/)
-- [ ] 1.6 - String Compression
+- [x] [1.6 - String Compression](./solutions/chapter-1/1.6-string-compressiony/)
 - [ ] 1.7 - Rotate Matrix
 - [ ] 1.8 - Zero Matrix
 - [ ] 1.9 - String Rotation

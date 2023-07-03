@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String compression | Cracking the Coding Interview</title>
+  <meta name="description" content="String compression exercise with description, tips and solutions">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai-sublime.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/index.css">
+</head>
+<body>
+  <article>
+    <ul class="breadcrumb">   
+      <li><a target="_blank" href="../../">Cracking the Coding Interview</a></li>
+      <li><a target="_blank" href="../">Chapter 1</a></li>
+      <li>String compression</li>
+    </ul>
+    
+    <h1 class="title-01">String compression</h1>
+    
+    <p>Implemente uma função para executar a compactação de uma string simples usando um contador para os caracteres repetidos.</p>
+
+    <p>Por exemplo, a string <code>aabcccccaaa</code> deve retornar <code>a2b1c5a3</code>.</p>
+
+    <p>A compactação deve sempre retornar uma string com tamanho menor do que ao valor da entrada. Se não for, sua função deve retornar a string original.</p>
+
+    <p>Você pode assumir que a string tem apenas letras maísculas e minúsculas (az-AZ)</p>
+
+    <h2 class="title-tip">Dicas</h2>
+    <ul class="list">
+      <li>Faça o simples primeiro. Realiza a compreensão e depois compare os tamanhos.</li>
+      <li>Tenha cuidado para não concatenar strings repetidamente. Isso pode ser muito ineficiente.</li>
+    </ul>
+
+    <h3 class="title-03">Solução 1:</h3>
+
+    <pre class="code-highlight">
+      <code class="code-display language-javascript">
+function stringCompression (input) {
+  const inputSize = input.length
+  const tempObj = {}
+
+  let result = ""
+  let previous = ""
+
+  for (let index = 0; index < inputSize; index++) {
+    const currentCharacter = input[index];
+    
+    if (!tempObj[currentCharacter]) {
+      tempObj[currentCharacter] = 1
+    } else {
+      tempObj[currentCharacter]++
+    }
+
+    if (previous && previous !== currentCharacter) {
+      result = `${result}${previous}${tempObj[previous]}` 
+      tempObj[previous] = 0
+    } 
+
+    previous = currentCharacter
+
+    if (index === (inputSize - 1)) {
+      result = `${result}${currentCharacter}${tempObj[currentCharacter]}` 
+
+      if (result.length > inputSize) {
+        result = input
+      }
+    }
+  }
+
+  return result
+}
+      </code>
+      <div class="code-original"></div>
+      <button title="Click here to copy the code" class="copy-to-clipboard"></button>
+    </pre>
+
+    <h3 class="title-03">Solução 2:</h3>
+
+    <pre class="code-highlight">
+      <code class="code-display language-javascript">
+function stringCompression (input) {
+  const inputLength = input.length
+  let result = ""
+  let count = 0
+
+  for (let index = 0; index < inputLength; index++) {
+    const currentCharacter = input[index];
+    count++
+    
+    if (input[index + 1] !== currentCharacter) {
+      result = `${result}${currentCharacter}${count}` 
+      count = 0
+    }
+  }
+
+  return result.length > inputLength
+          ? input
+          : result
+              
+}
+      </code>
+      <div class="code-original"></div>
+      <button title="Click here to copy the code" class="copy-to-clipboard"></button>
+    </pre>
+
+    <h3 class="title-03">Solução 3:</h3>
+
+    <pre class="code-highlight">
+      <code class="code-display language-javascript">
+function stringCompression (input) {
+  const inputArray = input.split("")
+  const resultArray = []
+
+  let count = 0
+
+  for (let index = 0; index < inputArray.length; index++) {
+    const currentCharacter = input[index];
+    count++
+    
+    if (input[index + 1] !== currentCharacter) {
+    resultArray.push(currentCharacter)
+    resultArray.push(count)
+    count = 0
+    }
+  }
+
+  const resultStr = resultArray.join("")
+
+  return resultStr.length > input.length
+          ? input
+          : resultStr
+}
+      </code>
+      <div class="code-original"></div>
+      <button title="Click here to copy the code" class="copy-to-clipboard"></button>
+    </pre>
+  </article>
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.8.0/build/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js"></script>
+  <script src="../../assets/js/index.js"></script> 
+</body>
+</html>
